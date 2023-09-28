@@ -1,0 +1,37 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:ListAllMyBuckets",
+                "s3:CreateBucket",
+                "s3:PutBucketVersioning",
+                "s3:GetBucketLocation",
+                "s3:GetObjectVersion",
+                "s3:ListBucketVersions",
+                "acm:ImportCertificate",
+                "acm:ListCertificates",
+                "iot:*",
+                "iam:ListRoles",
+                "freertos:ListHardwarePlatforms",
+                "freertos:DescribeHardwarePlatform"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::xxxxxxxx/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::yyyyyyyyyyyy:role/zzzz"
+        }
+    ]
+}
